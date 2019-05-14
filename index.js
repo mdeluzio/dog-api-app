@@ -7,6 +7,10 @@ function getImages(num) {
 
 function logResults(responseJson) {
     console.log(responseJson);
+    
+    for (let i = 0; i < responseJson.message.length; i++) {
+        $(".pictures").append("<img src='" + responseJson.message[i] + "'>")
+    }
 
     $(".images").removeClass('hidden');
 }
@@ -21,6 +25,9 @@ function submitForm() {
             alert("You must select a number between 1 and 50");
             return;
         }; 
+
+        $(".pictures").empty();
+
         getImages(num);
     });
 }
