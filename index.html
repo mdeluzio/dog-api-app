@@ -6,9 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simple GET Requests assignment</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-
 </head>
 <body>
+    <header>
+        <h1>Simple GET Request Example</h1>
+    </header>
+    
+    <main role="main">
+        <div class="container">
+            <form>
+                <label for="dogNumber">Please enter the amount of dog pictures you would like to see (max:50)</label>
+                <input type="number" id="dogNumber" value="3" required>
+                <input type="submit" value="Get Dogs!">
+            </form>
+
+            <section class="images hidden">
+                <h2>Enjoy your dogs</h2>
+            </section>
+        </div>
+    <main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>
 </body>
